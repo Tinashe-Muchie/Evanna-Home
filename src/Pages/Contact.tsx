@@ -1,34 +1,26 @@
-import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup  from 'yup';
 import { FaQuestion, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export const CONTACT_US = () => {
-  const [values, setValues] = useState({
-    fullname: "",
-    email: "",
-    phone_number: "",
-  });
-
-  const inputs = [
-    {
-      id: 1,
-      name: "fullname",
-      type: "text",
-      placeholder: "Angela Nyahuruwa"
+  const formik = useFormik({
+    initialValues: {
+      fullname: "",
+      email: "",
+      phone_number: "",
+      message: ""
     },
-    {
-      id: 2,
-      name: "email",
-      type: "email",
-      placeholder: "evannahomeware@yahoo.com"
-    },
-    {
-      id: 3,
-      name: "phone_number",
-      type: "tel",
-      placeholder: "+263 77 534 5876"
-    }
-  ];
+    validationSchema: Yup.object({
+      fullname: Yup.string()
+        .max(20, 'Must be 20 characters or less')
+        .required('Required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      phone_number: Yup.number().min(10, 'Must be 10 characters or more').required('Required')
+    }),
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+  }})
 
   return (
     <section className="contact_us_container">
@@ -44,17 +36,46 @@ export const CONTACT_US = () => {
           </div>
         </header>
         <main>
-          {inputs.map((input) => (
-            <input
-              key={input.id}
-              type={input.type}
-              placeholder={input.placeholder}
-              value={values[input.name as keyof typeof values]}
-            />
-          ))}
+          <input
+            type="text"
+            name="fullname"
+            placeholder="Angela Nyahuruwa"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.fullname}
+          />
+          {formik.touched.fullname && formik.errors.fullname ? (
+          <div className="errors">{formik.errors.fullname}</div>
+          ) : null}
+          <input
+            type="email"
+            name="email"
+            placeholder="evannahomeware@yahoo.com"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+          />
+          {formik.touched.email && formik.errors.email ? (
+          <div className="errors">{formik.errors.email}</div>
+          ) : null}
+          <input
+            type="tel"
+            name="phone_number"
+            placeholder="+263 77 534 5876"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.phone_number}
+          />
+          {formik.touched.phone_number && formik.errors.phone_number ? (
+          <div className="errors">{formik.errors.phone_number}</div>
+        ) : null}
           <label>
             Message
-            <textarea />
+            <textarea 
+              name="message"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}/>
           </label>
           <input type="submit" value="Send" />
         </main>
