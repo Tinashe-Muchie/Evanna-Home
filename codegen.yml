@@ -1,0 +1,12 @@
+overwrite: true
+schema: `https://api-us-east-1.graphcms.com/v2/${process.env.REACT_APP_API_KEY}/master`
+documents: "src/Queries/*.ts"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
