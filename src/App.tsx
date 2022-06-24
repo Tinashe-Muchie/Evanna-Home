@@ -1,10 +1,13 @@
 import "./styles.css";
 import { HEADER, FOOTER } from "./Components/index";
 import { ROUTING } from "./Routing";
+import { ApolloProvider } from "@apollo/client";
+import client from './apolloClient';
 
 export default function App() {
   return (
-    <div className="app_wrapper">
+    <ApolloProvider client={client}>
+      <div className="app_wrapper">
       <main className="main_content">
         <HEADER />
         <ROUTING />
@@ -13,5 +16,7 @@ export default function App() {
         <FOOTER />
       </footer>
     </div>
+    </ApolloProvider>
+    
   );
 }
