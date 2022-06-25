@@ -456,6 +456,80 @@ input[type="number"] {
   font-weight: bold;
 }
 
+/*products page styling*/
+.products_page_container {
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+  padding: .5em;
+}
+
+/*dropdown styling*/
+.dropdown_wrapper {
+  padding: .5em;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown_label {
+  padding: 0.5em 2em 0.5em 1.5em;
+  border: 1px solid var(--logo_green);
+  background-color: var(--logo_gold);
+  color: var(--logo_green);
+}
+
+.dropdown_label::after {
+  content: "";
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  border: 0.3em solid;
+  border-color: black transparent transparent;
+}
+
+.dropdown:hover .dropdown-label::after {
+  top: 0.7em;
+  border-color: transparent transparent black;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 2.1em;
+  min-width: 100%;
+  background-color: var(--logo_gold);
+}
+
+.dropdown:hover .dropdown_menu {
+  display: block;
+}
+  
+.submenu {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  border: 1px solid var(--logo_green);
+}
+
+.submenu > li + li {
+  border-top: 1px solid var(--logo_green);
+}
+.submenu > li > a {
+    display: block;
+    padding: .5em 1.5em;
+    background-color: var(--logo_gold);
+    color: var(--logo_green);
+    text-decoration: none;
+}
+
+.submenu > li > a:hover {
+    background-color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   .category_container {
     font-size: 1rem;
