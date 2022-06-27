@@ -4,7 +4,8 @@ import {
   ABOUT_US,
   CONTACT_US,
   PRODUCTS,
-  INTERIOR_DECOR
+  INTERIOR_DECOR,
+  DETAILS
 } from "./Pages/index";
 
 export const ROUTING = () => {
@@ -15,6 +16,7 @@ export const ROUTING = () => {
       <Route path="/services" element={<INTERIOR_DECOR />} />
       <Route path="/about_us" element={<ABOUT_US />} />
       <Route path="/contact" element={<CONTACT_US />} />
+      <Route path="/details" element={<DETAILS />} />
     </Routes>
   );
 };
