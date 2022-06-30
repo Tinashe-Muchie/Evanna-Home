@@ -10,30 +10,55 @@ export const HEADER = () => {
       <div className="head_wrapper">
         <div className="delivery">
           <div>
-            <span>
-              <FaStoreAlt />
-            </span>
-            <span>Click & Collect</span>
+            <NavLink
+              to="/"
+              end
+              className="delivery_links"
+            >
+              <span>
+                <FaStoreAlt />
+              </span>
+              <span>Click & Collect</span>
+            </NavLink>
+            
           </div>
           <div>
-            <span>
-              <FaTruckMoving />
-            </span>
-            <span>Home Delivery</span>
+            <NavLink
+              to="/"
+              end
+              className="delivery_links"
+            >
+              <span>
+                <FaTruckMoving />
+              </span>
+              <span>Home Delivery</span>
+            </NavLink>
           </div>
         </div>
         <div className="delivery">
           <div>
-            <span>
-              <FaUser />
-            </span>
-            <span>Sign In</span>
+            <NavLink
+              to="/signIn"
+              end
+              className="delivery_links"
+            >
+              <span>
+                <FaUser />
+              </span>
+              <span>Sign In</span>
+            </NavLink>
           </div>
           <div>
-            <span>
-              <FaCartPlus />
-            </span>
-            <span>Cart</span>
+            <NavLink
+              to="/cart"
+              end
+              className="delivery_links"
+            >
+              <span>
+                <FaCartPlus />
+              </span>
+              <span>Cart</span>
+            </NavLink>
           </div>
         </div>
       </div>
