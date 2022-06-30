@@ -5,3 +5,4 @@ export { INTERIOR_DECOR } from "./Interior_Decor_Services";
 export { CONTACT_US } from "./Contact";
 export { SIGN_IN } from "./SignIn";
 export { CART } from "./Cart";
+export { DETAILS } from "./Details";
