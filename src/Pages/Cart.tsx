@@ -21,13 +21,15 @@ export const CART = () => {
   return(
     <div className="cart_wrapper">
         <div className="cart_heading"> My Cart </div>
+        <div className="cart_wrapper_container">
+        <div className="cart_content_wrapper">
         {
           items.map((item)=> {
             
             const Quantity = item.quantity as number;
             
             return (
-              <div className="cart_content_wrapper" key={item.id}>
+              <div className="content_wrapper" key={item.id}>
               <div className="item_description">
                 <img 
                   src={item.productPhoto[0].url} 
@@ -61,10 +63,11 @@ export const CART = () => {
             )
           })
         }
+        </div>
         <div>
           <div className="order_summary_wrapper">
             <div className="items_summary_wrapper">
-              <span>items {totalItems} </span>
+              <span> <strong>Total Items</strong> {totalItems} </span>
               <span> R {cartTotal} </span>
             </div>
             <div className="shipping_details">
@@ -82,7 +85,7 @@ export const CART = () => {
             </div>  
           </div>
         </div>
-        <div>
+        <div className="cart_buttons">
           <button
             onClick={ () => navigate(-1)}
             className="back_button"
@@ -96,7 +99,7 @@ export const CART = () => {
             Empty Cart
           </button>
         </div>
-        
+        </div>
     </div>
   );
 }
