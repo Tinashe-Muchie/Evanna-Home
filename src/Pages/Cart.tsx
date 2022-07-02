@@ -1,5 +1,6 @@
 import { useCart } from "react-use-cart";
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const CART = () => {
     const {
@@ -77,11 +78,17 @@ export const CART = () => {
 
             </div>
             <div>
-              <button 
+              <NavLink
+                to="/checkout"
+                end
+                className="checkout_link"
+              >
+                <button 
                 className="checkout_button"
               > 
                 checkout 
               </button>
+              </NavLink>
             </div>  
           </div>
         </div>
