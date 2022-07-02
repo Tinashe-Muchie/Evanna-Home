@@ -18,23 +18,13 @@ export const CHECKOUT = () => {
         return <ADDRESSFORM next={Next}/>
       case 1:
         return <PAYMENT 
-                  Next={Next}
-                  Prev={Prev}
-                  timeout={timeout}
+                  next={Next}
+                  prev={Prev}
                 />
       case 2: 
-        return <CONFIRMATION 
-                  Done={done}
-                />
+        return <CONFIRMATION />
       default: throw new Error()
     }
-  }
-
-  const [done, setDone] = useState(false)
-  const timeout = () => {
-    setTimeout(()=>{
-      setDone(true)
-    }, 7000)
   }
 
     return (
