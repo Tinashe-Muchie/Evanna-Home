@@ -1,17 +1,18 @@
 import { NavLink } from 'react-router-dom';
 
-export const CONFIRMATION = ({Done}:any) => {
+export const CONFIRMATION = () => {
     return (
         <div className="confirmation_wrapper">
             <div className="confirmation_heading">
                 <span>Confirmation</span>
-                <span>Your order confirmation!</span>
             </div>
-            <span> Thank you for shopping at Evanna Homeware </span>
+            <span> Thank you for shopping at Evanna Homeware. </span>
             
             <div className="button_wrapper">
                 <NavLink to='/'>
-                    <button>
+                    <button
+                        className='confirmation_button'
+                    >
                         Continue Shopping
                     </button>
                 </NavLink>
