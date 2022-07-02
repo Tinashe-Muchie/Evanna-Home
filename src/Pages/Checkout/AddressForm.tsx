@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-export const ADDRESSFORM = ({next}:any) => {
+export const ADDRESSFORM = ({next}:{next: ()=> void}) => {
 
     const formik = useFormik({
         initialValues: {
@@ -35,7 +35,6 @@ export const ADDRESSFORM = ({next}:any) => {
         <form onSubmit={formik.handleSubmit} className="addressform_wrapper">
             <div className='addressform_header'> 
                 <span>Shipping Details</span>
-                <span>Tell us about your shipping details!</span>
             </div>
         <label htmlFor="firstName">First Name</label>
         <input
@@ -158,7 +157,11 @@ export const ADDRESSFORM = ({next}:any) => {
             </div>
           </div>
         </div>
-        <button> Next </button>
+        <button 
+          className='next_button'
+          type="submit"
+          onClick={() => next()}
+          > Next </button>
         </form>
         </div>
     );
