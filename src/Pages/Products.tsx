@@ -62,7 +62,10 @@ export const PRODUCTS = () => {
             <div key={item.id}>
               <Link 
                 to="/details"
-                state={item}
+                state={{
+                  item,
+                  category_name: product?.title
+                }}
                 className="product_link"
               >
                 <PRODUCT_CARD name={item.name} price={item.price} image={item.productPhoto} />
