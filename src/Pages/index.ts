@@ -6,4 +6,4 @@ export { CONTACT_US } from "./Contact";
 export { SIGN_IN } from "./SignIn";
 export { CART } from "./Cart";
 export { DETAILS } from "./Details";
-export { CHECKOUT } from "./Checkout";
+export { CHECKOUT } from "./Checkout/Checkout";
