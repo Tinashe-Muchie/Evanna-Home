@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ITEM_TYPE } from '../generated/categories_generated';
 import { FaPaypal, FaCcVisa, FaCcMastercard } from 'react-icons/fa';
+import { useCart } from 'react-use-cart';
 
 interface PRODUCT_IF {
     item: ITEM_TYPE;
@@ -13,6 +14,9 @@ export const DETAILS = () => {
     const {item, category_name} = product;
 
     const navigate = useNavigate();
+
+    const { addItem, inCart } = useCart();
+    const itemExist = inCart(item.id);
 
     return (
         <div className="details_container">
@@ -41,10 +45,15 @@ export const DETAILS = () => {
                 </div>
                 <div className="main_title">
                     <span> {item.name} </span>
-                    <span> R {item.price} </span>
+                    <span> {item.availability ? `R ${item.price}` 
+                            : <span className='sold_out'>sold out</span>} 
+                    </span>
                     <span> Free shipping for orders above R 2500.00</span>
                     <span> <strong>Shipping</strong> calculated at checkout. </span>
-                    <button className="cart_button">
+                    <button 
+                        className={ item.availability ? "cart_button" : "cart_button_disabled" }
+                        onClick={ () => addItem(item)}
+                    >
                         Add to Cart
                     </button>
                     <div className="payment_methods">
