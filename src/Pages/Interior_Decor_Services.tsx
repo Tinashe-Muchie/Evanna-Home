@@ -27,15 +27,15 @@ export const INTERIOR_DECOR = () => {
     validationSchema: Yup.object({
       firstName: Yup.string()
         .max(15, 'Must be 15 characters or less')
-        .required('Required'),
+        .required('This is required'),
       lastName: Yup.string()
         .max(20, 'Must be 20 characters or less')
-        .required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      phone_number: Yup.number().min(10, 'Must be 10 characters or more').required('Required'),
-      user: Yup.string().min(5, 'Must be 5 characters or more').required('Required'),
-      style: Yup.string().min(5, 'Must be 5 characters or more').required('Required'),
-      priority: Yup.string().min(5, 'Must be 5 characters or more').required('Required'),
+        .required('This is required'),
+      email: Yup.string().email('Invalid email address').required('This is required'),
+      phone_number: Yup.number().min(10, 'Must be 10 characters or more').required('This is required'),
+      user: Yup.string().min(5, 'Must be 5 characters or more').required('This is required'),
+      style: Yup.string().min(5, 'Must be 5 characters or more').required('This is required'),
+      priority: Yup.string().min(5, 'Must be 5 characters or more').required('This is required'),
     }),
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
