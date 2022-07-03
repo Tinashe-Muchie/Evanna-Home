@@ -14,9 +14,9 @@ export const CONTACT_US = () => {
     validationSchema: Yup.object({
       fullname: Yup.string()
         .max(20, 'Must be 20 characters or less')
-        .required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      phone_number: Yup.number().min(10, 'Must be 10 characters or more').required('Required')
+        .required('This is required'),
+      email: Yup.string().email('Invalid email address').required('This is required'),
+      phone_number: Yup.number().min(10, 'Must be 10 characters or more').required('This is required')
     }),
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
