@@ -4324,3 +4324,56 @@ export function useMyQueryLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<My
 export type MyQueryQueryHookResult = ReturnType<typeof useMyQueryQuery>;
 export type MyQueryLazyQueryHookResult = ReturnType<typeof useMyQueryLazyQuery>;
 export type MyQueryQueryResult = Apollo.QueryResult<MyQueryQuery, MyQueryQueryVariables>;
+
+export type CATEGORY_TYPE = {
+  categories: Array<
+    { 
+    __typename?: 'Category', 
+    id: string, 
+    slug: string, 
+    title: string, 
+    product: Array<{ 
+        __typename?: 'Product', 
+        id: string, 
+        name: string, 
+        availability: boolean, 
+        price: number, 
+        productDescription: string, 
+        slug?: string | null, 
+        productPhoto: Array<{ 
+            __typename?: 'Asset', 
+            id: string, 
+            url: string 
+        }> }> }>
+}
+
+export type PRODUCT_TYPE = {
+  product: Array<{ 
+    __typename?: 'Product', 
+    id: string, 
+    name: string, 
+    availability: boolean, 
+    price: number, 
+    productDescription: string, 
+    slug?: string | null, 
+    productPhoto: Array<{ 
+        __typename?: 'Asset', 
+        id: string, 
+        url: string 
+    }> }>
+}
+
+export type ITEM_TYPE = {
+    __typename?: 'Product', 
+    id: string, 
+    name: string, 
+    availability: boolean, 
+    price: number, 
+    productDescription: string, 
+    slug?: string | null, 
+    productPhoto: Array<{ 
+        __typename?: 'Asset', 
+        id: string, 
+        url: string 
+    }>
+}
