@@ -15,8 +15,7 @@ export const DETAILS = () => {
 
     const navigate = useNavigate();
 
-    const { addItem, inCart } = useCart();
-    const itemExist = inCart(item.id);
+    const { addItem } = useCart();
 
     return (
         <div className="details_container">

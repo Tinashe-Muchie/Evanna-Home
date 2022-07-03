@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { SIGNUP_INPUTS_IF, SIGNIN_INPUTS_IF, SIGNIN_VALUES_IF } from "../Types";
+import { SIGNIN_INPUTS_IF } from "../Types";
 
 export const SIGN_IN = () => {
-  const [values, setValues] = useState<SIGNIN_VALUES_IF>({
+  /*const [values, setValues] = useState<SIGNIN_VALUES_IF>({
     email: "",
     phone_number: "",
     first_name: "",
@@ -36,7 +35,7 @@ export const SIGN_IN = () => {
       type: "text",
       placeholder: "last name"
     }
-  ];
+  ];*/
 
   const signin_inputs: SIGNIN_INPUTS_IF[] = [
     {

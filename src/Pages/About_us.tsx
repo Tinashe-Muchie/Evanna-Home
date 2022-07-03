@@ -13,7 +13,7 @@ export const ABOUT_US = () => {
         house a home. We strive to continue giving you unique accessories to
         beautify your home and offices.
       </span>
-      <img src="" alt="Angie's picture(owner of evanna homeware)" />
+      <img src="" alt="" />
       <span>
         It has always been a goal for the founder{" "}
         <strong>Angela T. Nyahuruwa</strong> to bring unique, affordable
