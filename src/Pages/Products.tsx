@@ -1,48 +1,10 @@
-import { useEffect, useState } from 'react';
-import { gql} from "@apollo/client";
-import client from "../apolloClient";
 import { useLocation } from 'react-router-dom';
 import { MyQueryQuery } from '../generated/categories_generated';
 import { PRODUCT_CARD } from '../Components/ProductCard';
 import { Link } from 'react-router-dom';
 
 
-export const PRODUCTS = () => {
-  const [products, setProducts] = useState<MyQueryQuery | undefined>(undefined);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await client.query({
-        query: gql`
-        query MyQuery {
-          categories(first: 25) {
-            slug
-            title
-            id
-            product(first: 25) {
-              ... on Product {
-                id
-                name
-                availability
-                price
-                productDescription
-                slug
-                productPhoto {
-                  id
-                  url
-                }
-              }
-            }
-          }
-        }
-        `
-      });
-
-      setProducts(data);
-    };
-
-    fetchProducts();
-  }, []);
+export const PRODUCTS = ({products}: {products: MyQueryQuery | undefined}) => {
 
   const location = useLocation();
   const data = location.state;

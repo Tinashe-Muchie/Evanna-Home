@@ -38,7 +38,8 @@ export const INTERIOR_DECOR = () => {
       priority: Yup.string().min(5, 'Must be 5 characters or more').required('This is required'),
     }),
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      console.log(values);
+      alert('Your form has been submitted');
     },
   })
 

@@ -19,7 +19,8 @@ export const CONTACT_US = () => {
       phone_number: Yup.number().min(10, 'Must be 10 characters or more').required('This is required')
     }),
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      console.log(values);
+      alert('Your form has been submitted')
   }})
 
   return (
