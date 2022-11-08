@@ -38,7 +38,7 @@ export const HEADER = () => {
         <div className="delivery">
           <div>
             <NavLink
-              to="/signIn"
+              to="/"
               end
               className="delivery_links"
             >
