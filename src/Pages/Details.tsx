@@ -21,7 +21,7 @@ export const DETAILS = () => {
         <div className="details_container">
             <div className="details_wrapper">
                 <div className="main_image">
-                    <img 
+                    <img                             
                         src={item.productPhoto[0].url} 
                         alt=""
                         height={400}
