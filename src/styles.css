@@ -766,9 +766,10 @@ input[type="number"] {
 }
 
 .cart_wrapper .order_summary_wrapper {
-  box-shadow: inset 0 0 .3em var(--logo_gold);
+  box-shadow: 0 0 .2em var(--logo_gold);
   padding: .5em;
   color: var(--logo_green);
+  min-height: 30em;
 }
 
 .cart_wrapper .order_summary_wrapper .items_summary_wrapper {
@@ -1014,7 +1015,7 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   min-height: 15em;
-  box-shadow: inset 0 0 .4em var(--logo_gold);
+  box-shadow: 0 0 .15em var(--logo_green);
   padding: .5em;
   margin: 0.3em 0em;
   color: var(--logo_green);
@@ -1213,9 +1214,10 @@ input[type="number"] {
   }
 
   .testimonial_tabs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0.5em;
   }
 
   .testimonial_tabs .tab {
@@ -1224,7 +1226,6 @@ input[type="number"] {
     justify-content: center;
     align-items: center;
     min-height: 15em;
-    box-shadow: inset 0 0 .4em var(--logo_gold);
     padding: .5em;
     margin: 0em .3em;
     color: var(--logo_green);
