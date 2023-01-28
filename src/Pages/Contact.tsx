@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup  from 'yup';
 import { FaQuestion, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 
 export const CONTACT_US = () => {
   const formik = useFormik({
@@ -95,25 +94,25 @@ export const CONTACT_US = () => {
         <div>
           Social Media:
           <span className="socials">
-            <NavLink to="/facebook" className="socials_links" end>
-              <FaFacebookF />
-            </NavLink>
-          </span>
-          <span className="socials">
-            <NavLink
-              to={{ pathname: "/https://www.instagram.com/evanna_homeware_/" }}
-              target="_blank"
-              className="socials_links"
-              end
-            >
-              <FaInstagram />
-            </NavLink>
-          </span>
-          <span className="socials">
-            <NavLink to="/tiktok" className="socials_links" end>
-              <FaTiktok />
-            </NavLink>
-          </span>
+          <a href="facebook" className="socials_links" target="_blank" rel="noreferrer">
+            <FaFacebookF />
+          </a>
+        </span>
+        <span className="socials">
+          <a
+            href="https://www.instagram.com/evanna_homeware_/"
+            rel="noreferrer"
+            target="_blank"
+            className="socials_links"
+          >
+            <FaInstagram />
+          </a>
+        </span>
+        <span className="socials">
+          <a href="tiktok" className="socials_links" target="_blank" rel="noreferrer">
+            <FaTiktok />
+          </a>
+        </span>
         </div>
       </div>
     </section>

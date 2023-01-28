@@ -42,19 +42,19 @@ export const FOOTER = () => {
       <section>
         <div>
           <span>
-            <NavLink to="/facebook" className="footer_socials" end>
+            <a href="/facebook" className="footer_socials" target="_blank" rel="noreferrer">
               <FaFacebookF />
-            </NavLink>
+            </a>
           </span>
           <span>
-            <NavLink to="/instagram" className="footer_socials" end>
+            <a href="https://www.instagram.com/evanna_homeware_/" className="footer_socials" target="_blank" rel="noreferrer">
               <FaInstagram />
-            </NavLink>
+            </a>
           </span>
           <span>
-            <NavLink to="/tiktok" className="footer_socials" end>
+            <a href="/tiktok" className="footer_socials" target="_blank" rel="noreferrer">
               <FaTiktok />
-            </NavLink>
+            </a>
           </span>
         </div>
         <span>&copy; Evanna Homeware, {current_year}. </span>

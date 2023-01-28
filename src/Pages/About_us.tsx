@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export const ABOUT_US = () => {
@@ -31,24 +30,24 @@ export const ABOUT_US = () => {
       </span>
       <div>
         <span className="socials">
-          <NavLink to="/facebook" className="socials_links" end>
+          <a href="facebook" className="socials_links" target="_blank" rel="noreferrer">
             <FaFacebookF />
-          </NavLink>
+          </a>
         </span>
         <span className="socials">
-          <NavLink
-            to={{ pathname: "/https://www.instagram.com/evanna_homeware_/" }}
+          <a
+            href="https://www.instagram.com/evanna_homeware_/"
+            rel="noreferrer"
             target="_blank"
             className="socials_links"
-            end
           >
             <FaInstagram />
-          </NavLink>
+          </a>
         </span>
         <span className="socials">
-          <NavLink to="/tiktok" className="socials_links" end>
+          <a href="tiktok" className="socials_links" target="_blank" rel="noreferrer">
             <FaTiktok />
-          </NavLink>
+          </a>
         </span>
       </div>
     </section>
