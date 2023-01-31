@@ -42,7 +42,7 @@ export const FOOTER = () => {
       <section>
         <div>
           <span>
-            <a href="/facebook" className="footer_socials" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/EvannaHomeware" className="footer_socials" target="_blank" rel="noreferrer">
               <FaFacebookF />
             </a>
           </span>
@@ -52,7 +52,7 @@ export const FOOTER = () => {
             </a>
           </span>
           <span>
-            <a href="/tiktok" className="footer_socials" target="_blank" rel="noreferrer">
+            <a href="https://www.tiktok .com/EvannaHomeware" className="footer_socials" target="_blank" rel="noreferrer">
               <FaTiktok />
             </a>
           </span>

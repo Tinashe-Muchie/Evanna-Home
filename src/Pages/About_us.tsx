@@ -30,7 +30,7 @@ export const ABOUT_US = () => {
       </span>
       <div>
         <span className="socials">
-          <a href="facebook" className="socials_links" target="_blank" rel="noreferrer">
+          <a href="https://www.facebook.com/EvannaHomeware" className="socials_links" target="_blank" rel="noreferrer">
             <FaFacebookF />
           </a>
         </span>
@@ -45,7 +45,7 @@ export const ABOUT_US = () => {
           </a>
         </span>
         <span className="socials">
-          <a href="tiktok" className="socials_links" target="_blank" rel="noreferrer">
+          <a href="https://www.tiktok.com/EvannaHomeware" className="socials_links" target="_blank" rel="noreferrer">
             <FaTiktok />
           </a>
         </span>

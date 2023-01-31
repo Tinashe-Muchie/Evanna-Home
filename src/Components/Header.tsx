@@ -1,4 +1,4 @@
-import { FaTruckMoving, FaUser, FaStoreAlt, FaCartPlus } from "react-icons/fa";
+import { FaUser, FaCartPlus } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export const HEADER = () => {
@@ -13,12 +13,9 @@ export const HEADER = () => {
               end
               className="delivery_links"
             >
-              <span>
-                <FaStoreAlt />
-              </span>
-              <span>Click & Collect</span>
+              <span></span>
+              <span></span>
             </NavLink>
-            
           </div>
           <div>
             <NavLink
@@ -26,10 +23,8 @@ export const HEADER = () => {
               end
               className="delivery_links"
             >
-              <span>
-                <FaTruckMoving />
-              </span>
-              <span>Home Delivery</span>
+              <span></span>
+              <span></span>
             </NavLink>
           </div>
         </div>

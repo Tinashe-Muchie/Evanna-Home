@@ -7,3 +7,5 @@ export { SIGN_IN } from "./SignIn";
 export { CART } from "./Cart";
 export { DETAILS } from "./Details";
 export { CHECKOUT } from "./Checkout/Checkout";
+export { TERMS_OF_SERVICE } from "./TermsOfService";
+export { REFUND_POLICY } from "./RefundPolicy";
