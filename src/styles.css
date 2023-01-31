@@ -1053,6 +1053,23 @@ input[type="number"] {
   color: var(--logo_green);
 }
 
+/*terms of service styling*/
+.terms_of_service_container {
+  color: var(--logo_green);
+  padding: .5em;
+}
+
+.terms_of_service_container h1 {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.terms_of_service_container h2 {
+  font-size: medium;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .category_container {
     font-size: 1rem;
@@ -1268,6 +1285,13 @@ input[type="number"] {
     padding: .5em;
     margin: 0em .3em;
     color: var(--logo_green);
+  }
+
+  /*terms of service styling*/
+  .terms_of_service_container {
+    display: block;
+    width: 80vw;
+    margin: auto;
   }
   
 }
